@@ -1,4 +1,4 @@
-author: hydingsy, Link-cute, Ir1d, greyqz, LuoshuiTianyi, Odeinjul, xyf007, GoodCoder666, paigeman, shenshuaijie
+author: hydingsy, Link-cute, Ir1d, greyqz, LuoshuiTianyi, Odeinjul, xyf007, GoodCoder666, paigeman, shenshuaijie, ClaireFuzzy
 
 前置知识：[动态规划部分简介](./index.md)。
 
@@ -243,9 +243,9 @@ for (循环物品种类) {
 === "C++"
     ```cpp
     for (int k = 1; k <= n; k++)
-      for (int i = m; i >= mi; i--)    // 对经费进行一层枚举
-        for (int j = t; j >= ti; j--)  // 对时间进行一层枚举
-          dp[i][j] = max(dp[i][j], dp[i - mi][j - ti] + 1);
+      for (int i = m; i >= m[k]; i--)    // 对经费进行一层枚举
+        for (int j = t; j >= t[k]; j--)  // 对时间进行一层枚举
+          dp[i][j] = max(dp[i][j], dp[i - m[k]][j - t[k]] + 1);
     ```
 
 === "Python"
